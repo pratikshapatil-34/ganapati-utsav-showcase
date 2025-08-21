@@ -8,35 +8,56 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Ganesh Utsav Festival Theme */
+    --background: 30 40% 98%;
+    --foreground: 15 25% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 30 50% 97%;
+    --card-foreground: 15 25% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 30 50% 97%;
+    --popover-foreground: 15 25% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Saffron/Orange primary theme */
+    --primary: 22 95% 60%;
+    --primary-foreground: 30 50% 97%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Deep red secondary */
+    --secondary: 348 80% 47%;
+    --secondary-foreground: 30 50% 97%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Warm muted tones */
+    --muted: 35 30% 90%;
+    --muted-foreground: 25 15% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Gold accent */
+    --accent: 51 100% 50%;
+    --accent-foreground: 15 25% 15%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 35 20% 85%;
+    --input: 35 20% 85%;
+    --ring: 22 95% 60%;
 
-    --radius: 0.5rem;
+    /* Festival specific colors */
+    --festival-saffron: 22 95% 60%;
+    --festival-red: 348 80% 47%;
+    --festival-gold: 51 100% 50%;
+    --festival-cream: 45 40% 95%;
+    --festival-brown: 25 35% 35%;
+
+    /* Gradients */
+    --gradient-sunset: linear-gradient(135deg, hsl(22 95% 60%), hsl(348 80% 47%));
+    --gradient-divine: linear-gradient(180deg, hsl(51 100% 50% / 0.1), hsl(22 95% 60% / 0.1));
+    --gradient-warm: linear-gradient(45deg, hsl(30 40% 98%), hsl(45 40% 95%));
+
+    /* Shadows */
+    --shadow-divine: 0 10px 40px hsl(22 95% 60% / 0.2);
+    --shadow-gentle: 0 4px 20px hsl(348 80% 47% / 0.1);
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +121,56 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-serif;
+    background: var(--gradient-warm);
+  }
+
+  /* Custom animations for festival theme */
+  @keyframes divine-glow {
+    0%, 100% { 
+      box-shadow: 0 0 20px hsl(var(--festival-gold) / 0.3);
+    }
+    50% { 
+      box-shadow: 0 0 40px hsl(var(--festival-gold) / 0.6);
+    }
+  }
+
+  @keyframes gentle-float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes blessing-fade {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Festival specific utility classes */
+  .divine-glow {
+    animation: divine-glow 3s ease-in-out infinite;
+  }
+
+  .gentle-float {
+    animation: gentle-float 6s ease-in-out infinite;
+  }
+
+  .blessing-fade {
+    animation: blessing-fade 1s ease-out;
+  }
+
+  .festival-gradient {
+    background: var(--gradient-sunset);
+  }
+
+  .divine-gradient {
+    background: var(--gradient-divine);
+  }
+
+  .festival-shadow {
+    box-shadow: var(--shadow-divine);
+  }
+
+  .gentle-shadow {
+    box-shadow: var(--shadow-gentle);
   }
 }

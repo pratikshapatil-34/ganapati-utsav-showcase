@@ -61,6 +61,13 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				festival: {
+					saffron: 'hsl(var(--festival-saffron))',
+					red: 'hsl(var(--festival-red))',
+					gold: 'hsl(var(--festival-gold))',
+					cream: 'hsl(var(--festival-cream))',
+					brown: 'hsl(var(--festival-brown))'
 				}
 			},
 			borderRadius: {
