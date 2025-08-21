@@ -21,7 +21,7 @@ const Hero = () => {
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         <div className="blessing-fade">
           <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 gentle-float">
-            गणपति बप्पा
+            गणपती बाप्पा मोरया
           </h1>
           <h2 className="text-3xl md:text-5xl font-semibold text-festival-gold mb-8">
             Ganpati Bappa Morya
@@ -29,7 +29,7 @@ const Hero = () => {
           
           <Card className="bg-white/10 backdrop-blur-md border-festival-gold/30 p-8 divine-gradient gentle-shadow">
             <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-6">
-              मङ्गलमूर्ति मोरया | Mangal murti morya
+              मंगलमूर्ती मोरया | Mangal murti morya
             </p>
             <p className="text-lg md:text-xl text-festival-cream">
               Welcome to the divine celebration of Lord Ganesha, the remover of obstacles and harbinger of new beginnings.
