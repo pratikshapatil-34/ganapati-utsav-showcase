@@ -58,7 +58,7 @@ const Prayer = () => {
                 Ganpati Bappa Morya
               </h3>
               <p className="text-lg text-festival-brown mb-4">
-                मङ्गलमूर्ति मोरया | पुढच्या वर्षी लवकर या
+                मंगलमूर्ती मोरया | पुढच्या वर्षी लवकर या
               </p>
               <p className="text-muted-foreground">
                 O auspicious one, come again early next year - the traditional farewell to Lord Ganesha
